@@ -1,0 +1,21 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  height: auto;
+  width: auto;
+}
+.header{
+  background-color: #000000;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+#titulo{
+  padding: 0px;
+  margin: 0px;
+  height: auto;
+  width: auto;
+}

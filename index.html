@@ -3,14 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Método de Esquina Noroeste</title>
-    <link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+
   </head>
   <body>
     <div class="header">
-      <h1>Metodo de Esquina Noroeste</h1>
+      <h1 id="titulo">Metodo de Esquina Noroeste</h1>
     </div>
     <div class="container">
-      <h1>Metodo</h1>
+      <form name="datos" id="form1" action="index.html" method="post">
+        <input type="text" name="filas" id="fil"/>
+        <input type="text" name="columnas" id="col"/>
+        <input type="button" value="Genera una tabla" onclick="generaTabla()">
+      </form>
     </div>
+
   </body>
+  <script src="main.js"></script>
 </html>
