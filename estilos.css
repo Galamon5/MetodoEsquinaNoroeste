@@ -13,9 +13,42 @@ body{
   height: auto;
   width: auto;
 }
+.container{
+  margin-left:0px;
+  height: auto;
+  width: auto;
+}
+#form1{
+  margin-left: 30px;
+  height: auto;
+  width: auto;
+}
+#fil,#col,#env{
+  margin: 10px;
+  height: auto;
+  width: auto;
+}
 #titulo{
   padding: 0px;
   margin: 0px;
+  height: auto;
+  width: auto;
+}
+#datos_table{
+  padding: 0px;
+  margin-top:10px;
+  height: auto;
+  width: auto;
+}
+#tabla{
+  padding: 0px;
+  margin: 10px;
+  height: auto;
+  width: auto;
+}
+#repito{
+  padding: 0px;
+  margin: 10px;
   height: auto;
   width: auto;
 }

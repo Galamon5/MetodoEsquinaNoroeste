@@ -72,7 +72,7 @@ function resuelve() {
     tabla[i-1] = col;
   }
   var resultado=algoritmoEsquina(tabla);
-  console.log(resultado);
+  alert("El resultado es: "+ resultado);
 }
 function algoritmoEsquina(tabla) {
   var res = new Array();
