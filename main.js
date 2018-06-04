@@ -67,10 +67,51 @@ function resuelve() {
     for (var j = 1; j <= destinos+1; j++) {
       if(i<=fuentes || j <= destinos){
         col[j-1]=parseInt(document.getElementById("t".concat(i.toString(),"_",j.toString())).value);
-        console.log(col[j-1])
       }
     }
     tabla[i-1] = col;
   }
-  console.log(tabla);
+  var resultado=algoritmoEsquina(tabla);
+  console.log(resultado);
+}
+function algoritmoEsquina(tabla) {
+  var res = new Array();
+  var resultado = 0;
+  var es = 0;
+  var dem = 0;
+  var offer = 0;
+  var i = 0;
+  var j = 0;
+
+  while(tabla.length>1){
+    es=tabla[i][i];
+    dem=tabla[i][tabla[i].length-1];
+    offer=tabla[tabla.length-1][i];
+    if(dem>offer){
+      res[j]=es*offer;
+      tabla[i][tabla[i].length-1]-=offer;
+      for (var z = 0; z < tabla.length; z++) {
+        tabla[z].splice(0,1);
+      }
+      console.log(tabla);
+    } else if (dem < offer){
+      res[j]=es*dem;
+      tabla[tabla.length-1][i]-=dem;
+      tabla.splice(0,1);
+      console.log(tabla);
+    } else{
+      res[j]=es*dem;
+      tabla.splice(0,1);
+      for (var z = 0; z < tabla.length; z++) {
+        tabla[z].splice(0,1);
+      }
+      console.log(tabla);
+    }
+    j++;
+  }
+  console.log(res);
+  for (var k = 0; k < res.length; k++) {
+    resultado+=res[k];
+  }
+  return resultado;
 }
