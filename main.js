@@ -38,11 +38,10 @@ function generaTabla(){
   div.appendChild(tabla);
   body.appendChild(div);
   tabla.setAttribute("border", "2");
-    document.getElementById("form1").style.display="none";
+  document.getElementById("form1").style.display="none";
   document.getElementById("datos_table").style.display="block";
   document.getElementById("repito").style.display="block";
 }
-
 function atras(){
   document.getElementById("form1").style.display="block";
   document.getElementById("datos_table").style.display="none";
