@@ -8,8 +8,8 @@ function generaTabla(){
   if(lol){
     lol.parentNode.removeChild(lol);
   }
-  var div   = document.createElement("div");
-  div.setAttribute("id","tabla");
+  var formu   = document.createElement("form");
+  formu.setAttribute("id","tabla");
   var tabla   = document.createElement("table");
   var tblBody = document.createElement("tbody");
   for (var i = 0; i <= fuentes+1; i++) {
@@ -34,9 +34,15 @@ function generaTabla(){
     }
     tblBody.appendChild(filas);
   }
+  var boton = document.createElement("input");
+  boton.setAttribute("id","datos_table");
+  boton.setAttribute("value","Resolver");
+  boton.setAttribute("type","button");
+  boton.setAttribute("onclick","resuelve()");
   tabla.appendChild(tblBody);
-  div.appendChild(tabla);
-  body.appendChild(div);
+  formu.appendChild(tabla);
+  formu.appendChild(boton);
+  body.appendChild(formu);
   tabla.setAttribute("border", "2");
   document.getElementById("form1").style.display="none";
   document.getElementById("datos_table").style.display="block";
@@ -51,15 +57,20 @@ function atras(){
     lol.parentNode.removeChild(lol);
   }
 }
+
 function resuelve() {
   var tabla=new Array();
   var fuentes = parseInt(document.getElementById('fil').value);
   var destinos = parseInt(document.getElementById('col').value);
   for (var i = 1; i <= fuentes+1; i++) {
+    var col=new Array();
     for (var j = 1; j <= destinos+1; j++) {
-      col[j]=parseInt(document.getElementById("t".concat(i.toString(),"_",j.toString())).value);
+      if(i<=fuentes || j <= destinos){
+        col[j-1]=parseInt(document.getElementById("t".concat(i.toString(),"_",j.toString())).value);
+        console.log(col[j-1])
+      }
     }
-    tabla[i] = col;
+    tabla[i-1] = col;
   }
   console.log(tabla);
 }
