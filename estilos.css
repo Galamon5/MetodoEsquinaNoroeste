@@ -46,6 +46,12 @@ body{
   height: auto;
   width: auto;
 }
+#tablas{
+  padding: 0px;
+  margin: 10px;
+  height: auto;
+  width: auto;
+}
 #repito{
   padding: 0px;
   margin: 10px;
